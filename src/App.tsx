@@ -1,7 +1,9 @@
+import Bible from "./pages/Bible"
+
 
 const App = () => {
   return (
-    <div className="text-[red]">App</div>
+    <div className="text-[red]"><Bible/></div>
   )
 }
 
