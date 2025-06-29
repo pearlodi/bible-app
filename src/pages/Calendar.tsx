@@ -9,10 +9,10 @@ export default function PlanCalendar() {
   const events = getCalendarData();
 
   const eventStyleGetter = (event: RBCEvent & { status: string }) => {
-    let backgroundColor = "#60A5FA"; // blue-400
-    if (event.status === "completed") backgroundColor = "#34D399"; // green-400
-    if (event.status === "missed") backgroundColor = "#F87171"; // red-400
-    if (event.status === "pending") backgroundColor = "#FBBF24"; // yellow-400
+    let backgroundColor = "#60A5FA"; 
+    if (event.status === "completed") backgroundColor = "#34D399"; 
+    if (event.status === "missed") backgroundColor = "#F87171"; 
+    if (event.status === "pending") backgroundColor = "#FBBF24"; 
 
     return {
       style: {

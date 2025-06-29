@@ -21,9 +21,6 @@ const AppRoutes = () => {
           <Route path="/plans/:planId/:day" element={<PlanDayView />} />
           <Route path="/my-plans" element={<PlanBoardPage />} />
           <Route path="/calendar" element={<PlanCalendar />} />
-
-
-
         </Route>
       </Routes>
     </Suspense>
