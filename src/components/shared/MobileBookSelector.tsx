@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import Picker from "react-mobile-picker";
 import { books } from "@/data/books";
-import { useBibleStore } from "@/hooks/useBibleStore";
+import { useBibleStore } from "@/store/useBibleStore";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 
 type Props = {
   open: boolean;
@@ -39,6 +40,8 @@ export default function MobileBookSelector({ open, onClose }: Props) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[320px] w-full">
+        <DialogTitle></DialogTitle>
+        <DialogDescription></DialogDescription>
         <div className="text-center mb-4 font-semibold">Select Book & Chapter</div>
         <Picker value={pickerValue} onChange={setPickerValue}>
           <Picker.Column name="book">

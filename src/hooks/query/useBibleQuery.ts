@@ -1,4 +1,4 @@
-import { useBibleStore } from "./useBibleStore";
+import { useBibleStore } from "../../store/useBibleStore";
 import { useQuery } from "@tanstack/react-query";
 
 export function useBibleQuery() {

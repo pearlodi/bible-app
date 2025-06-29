@@ -1,9 +1,11 @@
-import Bible from "./pages/Bible"
+import AppRoutes from "./routes/Index"
 
+// e.g. in App.tsx or your global styles
+import 'react-calendar/dist/Calendar.css';
 
 const App = () => {
   return (
-    <div className="text-[red]"><Bible/></div>
+    <div><AppRoutes/></div>
   )
 }
 

@@ -1,5 +1,5 @@
 import { books } from "@/data/books";
-import { useBibleStore } from "@/hooks/useBibleStore";
+import { useBibleStore } from "@/store/useBibleStore";
 
 type Props = {
   onClose: () => void;

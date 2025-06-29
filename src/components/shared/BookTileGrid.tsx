@@ -1,5 +1,5 @@
 import { books } from "@/data/books";
-import { useBibleStore } from "@/hooks/useBibleStore";
+import { useBibleStore } from "@/store/useBibleStore";
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";

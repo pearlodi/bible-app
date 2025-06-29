@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useBibleStore } from "@/hooks/useBibleStore";
+import { useBibleStore } from "@/store/useBibleStore";
 
 export function useSyncBibleUrl() {
   const [searchParams, setSearchParams] = useSearchParams();
