@@ -36,14 +36,14 @@ export default function BookTileGrid({ testament }: Props) {
         onChange={(e) => setSearch(e.target.value)}
         className="mb-4"
       />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-2">
         {filteredBooks.map((book) => (
           <button
             key={book.name}
             onClick={() => setPendingBook(book.name)}
             className={cn(
               "p-3 border rounded text-left transition text-sm",
-              book.name === selectedBook && "border-blue-500 font-semibold bg-blue-50"
+              book.name === selectedBook && "border-blue-500 font-semibold card"
             )}
           >
             {book.name}

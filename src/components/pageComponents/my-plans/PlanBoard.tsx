@@ -25,8 +25,7 @@ export default function PlanBoard() {
     if (newStatus === "available") return removePlan(id);
     if (newStatus === "ongoing") return selectPlan(id);
     if (newStatus === "completed") {
-      selectPlan(id); // ensure it's in the list
-      // optionally mark all days as complete if you want full completion
+      selectPlan(id); 
     }
   };
 

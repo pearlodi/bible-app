@@ -1,15 +1,30 @@
-import type { PlanProgress } from "@/hooks/usePlan";
 
 const APP_KEY = "bible-app";
-
-export type PlanStatus = "available" | "ongoing" | "completed";
+import type { MemoryStatus } from "@/types/memory";
 
 type BibleAppStorage = {
   plans?: {
-    selected?: PlanProgress[];
-    statuses?: Record<string, PlanStatus>; // plan.id -> "available" | "ongoing" | "completed"
+    selected?: any[];
+    statuses?: Record<string, string>;
   };
+  memory?: {
+    selected?: any[];
+    statuses?: Record<string, string>;
+  };
+  notes?: Record<string, string>; 
+
+  memoryStatuses?: Record<string, MemoryStatus>;
+  theme?: {
+    background?: string;
+  };
+  chat?: {
+    messages: { role: string; text: string }[];
+  };
+  verseChats?: Record<string, { role: string; text: string }[]>;
+  favorite?:Record<string,string>
+
 };
+
 
 function getStorage(): BibleAppStorage {
   if (typeof window === "undefined") return {};

@@ -39,7 +39,7 @@ export default function MobileBookSelector({ open, onClose }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[320px] w-full">
+      <DialogContent className="max-w-[320px] w-full">
         <DialogTitle></DialogTitle>
         <DialogDescription></DialogDescription>
         <div className="text-center mb-4 font-semibold">Select Book & Chapter</div>

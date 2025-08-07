@@ -5,8 +5,6 @@ import { usePlan } from "@/hooks/usePlan";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 export default function PlanCalendar() {
-  const { getCalendarData } = usePlan();
-  const events = getCalendarData();
 
   const eventStyleGetter = (event: RBCEvent & { status: string }) => {
     let backgroundColor = "#60A5FA"; 
@@ -28,10 +26,9 @@ export default function PlanCalendar() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">📅 Reading Plan Calendar</h2>
+      <h2 className="text-2xl font-bold mb-4 text-white">Streaks</h2>
       <Calendar
         localizer={localizer}
-        events={events}
         startAccessor="start"
         endAccessor="end"
         style={{ height: 600 }}

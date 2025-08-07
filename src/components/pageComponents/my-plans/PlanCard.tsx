@@ -28,9 +28,9 @@ export default function PlanCard({ plan }: { plan: PlanMeta }) {
       <h4 className="font-semibold">{plan.name}</h4>
       <ViewPlan planId={plan.id}/>
       <p className="text-sm text-gray-500">{plan.description}</p>
-      {isOngoing && progress?.currentDay && (
+      {isOngoing && (
         <>
-          <p className="text-sm text-blue-600 font-medium">
+          {/* <p className="text-sm text-blue-600 font-medium">
             📅 Current Day: {progress.currentDay}
           </p>
           <div className="h-2 bg-gray-200 rounded overflow-hidden mt-2">
@@ -40,7 +40,8 @@ export default function PlanCard({ plan }: { plan: PlanMeta }) {
                 width: `${(progress.completed.length / plan.totalDays) * 100}%`,
               }}
             />
-          </div>
+          </div> */}
+          <p>open(button to open the modal)</p>
         </>
       )}
     </div>

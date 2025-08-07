@@ -21,6 +21,7 @@ export default function PlanDayPage() {
     },
     enabled: !!reference,
   });
+  console.log(reference,"popopoppo")
 
   if (!dayEntry) return <p className="p-6">Invalid day</p>;
 

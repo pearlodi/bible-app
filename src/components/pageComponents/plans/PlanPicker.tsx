@@ -13,7 +13,7 @@ import {
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
   
-    const planTypes = Object.keys(planTypeLabels); // e.g., ["one-week", "one-month"]
+    const planTypes = Object.keys(planTypeLabels); 
     const activeTab = searchParams.get("type") || planTypes[0];
   
     const groupedPlans = allPlans.reduce<Record<string, typeof allPlans>>(

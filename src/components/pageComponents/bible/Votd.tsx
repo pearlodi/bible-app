@@ -8,9 +8,9 @@ export default function VerseOfTheDay() {
   if (error) return <p>Couldn't load verse. Try again later.</p>;
 
   return (
-    <div className="bg-yellow-100 p-4 rounded shadow">
+    <div className="card p-4 rounded shadow">
       <h2 className="font-bold text-lg mb-2">Verse of the Day</h2>
-      <p className="text-gray-800 italic">"{data?.text}"</p>
+      <p className="text-[#ffffffd4] italic text-base lg:text-sm">"{data?.text}"</p>
       <p className="text-right font-semibold mt-2">— {data?.reference}</p>
     </div>
   );

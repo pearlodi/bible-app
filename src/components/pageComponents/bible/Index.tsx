@@ -2,7 +2,7 @@ import Bible from "./Bible"
 import VerseOfTheDay from "./Votd"
 
 
-const Index = () => {
+const BiblePage = () => {
   return (
     <div>
         <VerseOfTheDay/>
@@ -10,4 +10,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default BiblePage
