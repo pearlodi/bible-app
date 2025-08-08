@@ -15,7 +15,9 @@ import { FaBible } from "react-icons/fa";
 
   export function BibleVerseDrawer({ verseText }: { verseText: string }) {
 
-  const { data, isLoading, error } = useQuery({
+  const { data,
+    //  isLoading, error 
+    } = useQuery({
     queryKey: ["bible", verseText],
     queryFn: async () => {
       const res = await fetch(`https://bible-api.com/${encodeURIComponent(verseText || "")}`);

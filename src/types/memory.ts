@@ -1,4 +1,4 @@
-export type MemoryStatus = "available" | "memorizing" | "completed";
+export type MemoryStatus = "available" | "ongoing" | "completed";
 export interface MemoryMeta {
     id: string;
     date: string; // e.g. "2025-01-01"

@@ -3,8 +3,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Copy } from "lucide-react";
-import askai from "@/assets/askai.png";
 import ask from "../../../assets/ask.png";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCopy } from "react-icons/io5";

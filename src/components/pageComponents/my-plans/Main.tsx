@@ -1,10 +1,10 @@
-import Index from "./Index"
+// import Index from "./Index"
 
 
-const PlanBoards = () => {
-  return (
-    <div><Index/></div>
-  )
-}
+// const PlanBoards = () => {
+//   return (
+//     <div><Index/></div>
+//   )
+// }
 
-export default PlanBoards
+// export default PlanBoards

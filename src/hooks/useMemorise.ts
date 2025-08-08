@@ -9,7 +9,7 @@ export type MemoriseProgress = {
   completed: number[];
   startDate: string;
   startedAt?: string;
-  status?: "available" | "memorizing" | "completed";
+  status?: "available" | "ongoing" | "completed";
 };
 export type CalendarDay = {
   date: string;
@@ -23,7 +23,7 @@ type CalendarEvent = {
   allDay: boolean;
   status: CalendarStatus;
 };
-export type MemoryStatus = "available" | "memorizing" | "completed";
+export type MemoryStatus = "available" | "ongoing" | "completed";
 export type CalendarStatus = "pending" | "missed" | "completed";
 
 export function useMemorise() {
@@ -49,7 +49,7 @@ export function useMemorise() {
       currentDay: 1,
       completed: [],
       startDate: today,
-      status: "memorizing",
+      status: "ongoing",
     };
 
     saveToStorage([...selectedMemorises, newMemorise]);
@@ -96,7 +96,7 @@ export function useMemorise() {
   
     if (progress.status === "completed") return "completed";
   
-    return "memorizing";
+    return "ongoing";
   };
   
   const getCalendarData = (): CalendarEvent[] => {

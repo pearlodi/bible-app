@@ -42,7 +42,7 @@ const HomePage = () => {
           <div data-aos="fade-up" data-aos-duration="1000" className="glass-card w-full p-4 lg:p-8  lg:w-[320px] ">
             <h2 className="font-bold text-2xl">Memorise</h2>
             <p className="text-sm mt-2">
-              Access memory verses and ensure that they are memorized before completion
+              Access memory verses and ensure that they are completed before completion
             </p>
           </div>
         </Link>

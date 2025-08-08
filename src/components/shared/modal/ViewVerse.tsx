@@ -62,7 +62,6 @@
 // };
 
 // export default ViewPlan;
-import React from 'react'
 
 const ViewVerse = () => {
   return (

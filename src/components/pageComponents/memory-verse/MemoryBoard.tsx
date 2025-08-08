@@ -16,13 +16,13 @@
 //     },
 //     {
 //       available: [],
-//       memorizing: [],
+//       ongoing: [],
 //       completed: [],
 //     }
 //   );
 
 //   const setStatus = (id: string, newStatus: MemoryStatus) => {
-//     if (newStatus === "memorizing") return selectMemorise(id); 
+//     if (newStatus === "ongoing") return selectMemorise(id); 
 //     if (newStatus === "completed") return removeMemorise(id);
 //     if (newStatus === "available") return removeMemorise(id); 
 //   };
@@ -33,15 +33,15 @@
 //       <DndProvider backend={HTML5Backend}  >
 //       <div className="flex flex-col md:flex-row gap-4 p-4 card">
 //         <MemoryColumn title="Memory verses" status="available" plans={categorized.available} onDropPlan={setStatus} />
-//         <MemoryColumn title="Memorizing" status="memorizing" plans={categorized.memorizing} onDropPlan={setStatus} />
-//         <MemoryColumn title="Memorized" status="completed" plans={categorized.completed} onDropPlan={setStatus} />
+//         <MemoryColumn title="ongoing" status="ongoing" plans={categorized.ongoing} onDropPlan={setStatus} />
+//         <MemoryColumn title="completed" status="completed" plans={categorized.completed} onDropPlan={setStatus} />
 //       </div>
 //     </DndProvider>
 //   </div>
 //   );
 // }
 import { useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { MemoryColumn } from "./MemoryColumn";
@@ -78,13 +78,13 @@ export default function PlanBoard() {
     },
     {
       available: [],
-      memorizing: [],
+      ongoing: [],
       completed: [],
     }
   );
 
   const setStatus = (id: string, newStatus: MemoryStatus) => {
-    if (newStatus === "memorizing") return selectMemorise(id);
+    if (newStatus === "ongoing") return selectMemorise(id);
     if (newStatus === "completed") return removeMemorise(id);
     if (newStatus === "available") return removeMemorise(id);
   };
@@ -126,13 +126,13 @@ export default function PlanBoard() {
             onDropPlan={setStatus}
           />
           <MemoryColumn
-            title="Memorizing"
-            status="memorizing"
-            plans={categorized.memorizing}
+            title="ongoing"
+            status="ongoing"
+            plans={categorized.ongoing}
             onDropPlan={setStatus}
           />
           <MemoryColumn
-            title="Memorized"
+            title="completed"
             status="completed"
             plans={categorized.completed}
             onDropPlan={setStatus}

@@ -39,10 +39,10 @@ export default function MemoryCard({
           className="text-sm bg-[#008000d6] text-[white] px-3 py-1 rounded  "
           onClick={onStart}
         >
-          Start Memorizing
+          Start ongoing
         </button>
       )}
-      {status === "memorizing" && (
+      {status === "ongoing" && (
         <button className="text-sm bg-[#008000d6] text-[white] px-3 py-1 rounded" onClick={() => setOpenMemoryComplete(true)}>Done </button>
       )}
       <MemoryVerseComplete open={openMemoryComplete} onClose={()=> setOpenMemoryComplete(false)} verse={memory.text} id={memory.id}/>

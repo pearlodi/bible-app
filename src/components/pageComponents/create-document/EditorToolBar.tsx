@@ -16,7 +16,7 @@ import { GrTextAlignRight } from "react-icons/gr";
 import { PiTextAlignJustify } from "react-icons/pi";
 import { RiListUnordered } from "react-icons/ri";
 import { IoLinkOutline } from "react-icons/io5";
-import { FaRegImage } from "react-icons/fa6";
+// import { FaRegImage } from "react-icons/fa6";
 
 interface EditorToolbarProps {
   editor: Editor | null;
@@ -25,7 +25,7 @@ interface EditorToolbarProps {
 
 export function EditorToolbar({
   editor,
-  handleImageUpload,
+  // handleImageUpload,
 }: EditorToolbarProps) {
   const [linkUrl, setLinkUrl] = useState("");
   const [linkText, setLinkText] = useState("");
@@ -231,15 +231,15 @@ export function EditorToolbar({
   );
 }
 
-const promptForFile = (): Promise<File | null> => {
-  return new Promise((resolve) => {
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "image/*";
-    input.onchange = (event) => {
-      const file = (event.target as HTMLInputElement).files?.[0] ?? null;
-      resolve(file);
-    };
-    input.click();
-  });
-};
+// const promptForFile = (): Promise<File | null> => {
+//   return new Promise((resolve) => {
+//     const input = document.createElement("input");
+//     input.type = "file";
+//     input.accept = "image/*";
+//     input.onchange = (event) => {
+//       const file = (event.target as HTMLInputElement).files?.[0] ?? null;
+//       resolve(file);
+//     };
+//     input.click();
+//   });
+// };

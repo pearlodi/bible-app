@@ -52,15 +52,15 @@ const ChatBot = () => {
     }
   };
 
-  const handleClear = () => {
-    const welcome = {
-      role: "ai",
-      text: "Hi there! Feel free to ask me anything about the Bible or Christianity.",
-    };
-    setMessages([welcome]);
-    storage.set({ chat: { messages: [welcome] } });
-    setInput("");
-  };
+  // const handleClear = () => {
+  //   const welcome = {
+  //     role: "ai",
+  //     text: "Hi there! Feel free to ask me anything about the Bible or Christianity.",
+  //   };
+  //   setMessages([welcome]);
+  //   storage.set({ chat: { messages: [welcome] } });
+  //   setInput("");
+  // };
 
   return (
     <div className="w-full lg:px-10 px-4 nobar max-w-full 2xl:max-w-[1900px] mx-auto h-screen max-h-screen  relative">
@@ -110,7 +110,7 @@ const ChatBot = () => {
             />
             <div className="flex gap-2">
               <Button
-                className="text-black bg-white"
+                className="text-black hover:bg-white bg-white"
                 onClick={handleSend}
                 disabled={loading}
               >

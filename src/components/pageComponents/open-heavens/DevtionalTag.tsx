@@ -131,7 +131,7 @@
 // };
 
 // export default DevotionalList;
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { storage } from "@/utils/storage";
 import badge from "../../../assets/badge.png";

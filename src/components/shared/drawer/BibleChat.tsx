@@ -12,7 +12,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { sendToGroq } from "@/lib/graphapi";
 import { storage } from "@/utils/storage";
 import { Loader2, Send, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 
 type Props = {

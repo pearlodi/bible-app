@@ -5,7 +5,7 @@ import { storage } from "@/utils/storage";
 
 export type PlanProgress = {
   id: string;
-  status: "verses" | "memorizing" | "memorized";
+  status: "available" | "ongoing" | "completed";
 };
 
 export type PlanStatus = PlanProgress["status"];
@@ -31,7 +31,7 @@ export function usePlan() {
     if (selectedPlans.some((p) => p.id === id)) return;
     const newPlan: PlanProgress = {
       id,
-      status: "verses", // default state
+      status: "available", // default state
     };
     saveToStorage([...selectedPlans, newPlan]);
   };

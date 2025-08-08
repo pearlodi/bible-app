@@ -8,7 +8,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import MobileBookSelector from "@/components/shared/MobileBookSelector";
 import { useBibleNavigation } from "@/hooks/useBibleNavigation";
 import VerseOfTheDay from "./Votd";
-import VerseChatDrawer from "@/components/shared/drawer/BibleChat";
 import BibleActions from "@/components/shared/popover/BibleActions";
 
 export default function Bible() {

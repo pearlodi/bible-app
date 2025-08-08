@@ -1,7 +1,5 @@
-// components/PlanCalendar.tsx
 import { Calendar, type Event as RBCEvent } from "react-big-calendar";
 import { localizer } from "@/utils/calendarConfig";
-import { usePlan } from "@/hooks/usePlan";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 export default function PlanCalendar() {

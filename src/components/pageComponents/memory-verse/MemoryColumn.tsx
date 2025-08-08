@@ -41,10 +41,10 @@ export function MemoryColumn({
           {title}
         </div>
         {
-          (status === 'memorizing' && plans.length < 1 ) && 
+          (status === 'ongoing' && plans.length < 1 ) && 
           <div className="text-center flex flex-col justify-center items-center h-full mt-10">
             <p className="text-white">Want to memoriae a verse?</p>
-            <p className="text-[#ffffffbb]">Drag it here or  click the start memorizing button</p>
+            <p className="text-[#ffffffbb]">Drag it here or  click the start ongoing button</p>
 
           </div>
         }
@@ -55,7 +55,7 @@ export function MemoryColumn({
             status={status}
             onStart={() => {
               if (status === "available") {
-                onDropPlan(plan.id, "memorizing");
+                onDropPlan(plan.id, "ongoing");
               }
             }}
           />

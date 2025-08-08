@@ -2,14 +2,13 @@ import ChatBot from "@/components/pageComponents/Chat.tsx/Index";
 import Favorites from "@/components/pageComponents/favorites/Index";
 import HomePage from "@/components/pageComponents/home/Index";
 import DevotionalList from "@/components/pageComponents/open-heavens/DevtionalTag";
-import BiblePage from "@/pages/Bible";
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 const Bible = lazy(() => import("@/components/pageComponents/bible/Bible"));
 const PlansPage = lazy(() => import("@/pages/Plans"));
-const PlanDayList = lazy(() => import("@/components/pageComponents/plans/PlanDays"));
-const PlanDayView = lazy(() => import("@/components/pageComponents/plans/PlanDayView"));
-const PlanBoardPage = lazy(() => import("@/pages/PlanBoard"));
+// const PlanDayList = lazy(() => import("@/components/pageComponents/plans/PlanDays"));
+// const PlanDayView = lazy(() => import("@/components/pageComponents/plans/PlanDayView"));
+// const PlanBoardPage = lazy(() => import("@/pages/PlanBoard"));
 const MemorisePage = lazy(() => import("@/pages/Memory"));
 const PlanCalendar = lazy(() => import("@/pages/Calendar"));
 const Notepad = lazy(() => import("@/components/pageComponents/create-document/Main"));
@@ -27,9 +26,9 @@ const AppRoutes = () => {
           <Route path="/welcome" element={<HomePage />} />
           {/* <Route path="/bible" element={<Bible />} /> */}
           <Route path="/plans" element={<PlansPage />} />
-          <Route path="/plans/:planId" element={<PlanDayList />} />
-          <Route path="/plans/:planId/:day" element={<PlanDayView />} />
-          <Route path="/my-plans" element={<PlanBoardPage />} />
+          {/* <Route path="/plans/:planId" element={<PlanDayList />} /> */}
+          {/* <Route path="/plans/:planId/:day" element={<PlanDayView />} /> */}
+          {/* <Route path="/my-plans" element={<PlanBoardPage />} /> */}
           <Route path="/memory-verse" element={<MemorisePage />} />
           <Route path="/calendar" element={<PlanCalendar />} />
           <Route path="/notes" element={<Notepad />} />

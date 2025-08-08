@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+  DialogOverlay,
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -64,7 +64,9 @@ const {markAsCompleted} = useMemorise()
   };
 
   return (
-    <Dialog open={open} onOpenChange={onClose}>
+    <Dialog open={open} onOpenChange={onClose} >
+            <DialogOverlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
+
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>
